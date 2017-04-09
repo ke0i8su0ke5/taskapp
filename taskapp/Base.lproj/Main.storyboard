@@ -101,50 +101,68 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kp7-Sp-AgB">
-                                <rect key="frame" x="16" y="145" width="35" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaa-Wz-gCG">
+                                <rect key="frame" x="16" y="145" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SSd-gb-cUX">
-                                <rect key="frame" x="16" y="176" width="343" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="Gy6-dk-emI"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7v-VA-l6V">
+                                <rect key="frame" x="16" y="176" width="343" height="30"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0sQ-yW-Jmj">
-                                <rect key="frame" x="0.0" y="306" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="377" width="375" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="wjQ-Ml-UPA"/>
+                                    <constraint firstAttribute="height" constant="120" id="amP-HW-h7e"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="513399583.42580003">
                                     <!--2017-04-09 02:59:43 +0000-->
                                 </date>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z66-4B-YoW">
+                                <rect key="frame" x="16" y="216" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SSd-gb-cUX">
+                                <rect key="frame" x="16" y="247" width="343" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="K9H-hH-IKJ"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="0sQ-yW-Jmj" secondAttribute="trailing" id="5xc-CP-Iex"/>
+                            <constraint firstItem="0sQ-yW-Jmj" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leading" id="2C4-ew-TyV"/>
+                            <constraint firstItem="Z66-4B-YoW" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leadingMargin" id="6E2-kz-T3E"/>
                             <constraint firstItem="FvB-Mk-uWo" firstAttribute="top" secondItem="czC-nv-08x" secondAttribute="bottom" constant="10" id="6Jg-SS-5SN"/>
                             <constraint firstItem="FvB-Mk-uWo" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leadingMargin" id="IFZ-rp-p4C"/>
-                            <constraint firstItem="kp7-Sp-AgB" firstAttribute="top" secondItem="FvB-Mk-uWo" secondAttribute="bottom" constant="10" id="h1i-Uy-iyh"/>
+                            <constraint firstItem="Oaa-Wz-gCG" firstAttribute="top" secondItem="FvB-Mk-uWo" secondAttribute="bottom" constant="10" id="Qm7-HK-AIm"/>
+                            <constraint firstItem="Oaa-Wz-gCG" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leadingMargin" id="TLQ-s7-QK8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V7v-VA-l6V" secondAttribute="trailing" id="TSg-Z6-9Rw"/>
+                            <constraint firstItem="0sQ-yW-Jmj" firstAttribute="top" secondItem="SSd-gb-cUX" secondAttribute="bottom" constant="10" id="UTo-nv-QVe"/>
+                            <constraint firstItem="SSd-gb-cUX" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leadingMargin" id="aq4-7f-fZc"/>
+                            <constraint firstItem="SSd-gb-cUX" firstAttribute="trailing" secondItem="a8f-Ne-fpk" secondAttribute="trailingMargin" id="bxs-dL-wY3"/>
+                            <constraint firstAttribute="trailing" secondItem="0sQ-yW-Jmj" secondAttribute="trailing" id="fjN-F3-Pme"/>
+                            <constraint firstItem="Z66-4B-YoW" firstAttribute="top" secondItem="V7v-VA-l6V" secondAttribute="bottom" constant="10" id="j5c-Bp-kRY"/>
+                            <constraint firstItem="V7v-VA-l6V" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leadingMargin" id="kdf-ry-gXl"/>
+                            <constraint firstItem="V7v-VA-l6V" firstAttribute="top" secondItem="Oaa-Wz-gCG" secondAttribute="bottom" constant="10" id="ncc-1w-GpU"/>
                             <constraint firstItem="czC-nv-08x" firstAttribute="top" secondItem="N0g-4E-bQv" secondAttribute="bottom" constant="10" id="nuG-yk-ywR"/>
                             <constraint firstItem="czC-nv-08x" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leadingMargin" id="pZP-xP-uS3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SSd-gb-cUX" secondAttribute="trailing" id="tI2-8z-RRR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FvB-Mk-uWo" secondAttribute="trailing" id="tP3-pB-AYZ"/>
-                            <constraint firstItem="0sQ-yW-Jmj" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leading" id="toI-wr-Coy"/>
-                            <constraint firstItem="SSd-gb-cUX" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leadingMargin" id="uN1-iJ-Rfd"/>
-                            <constraint firstItem="kp7-Sp-AgB" firstAttribute="leading" secondItem="a8f-Ne-fpk" secondAttribute="leadingMargin" id="vpo-jc-mDN"/>
-                            <constraint firstItem="0sQ-yW-Jmj" firstAttribute="top" secondItem="SSd-gb-cUX" secondAttribute="bottom" constant="10" id="wOp-bR-1eF"/>
-                            <constraint firstItem="SSd-gb-cUX" firstAttribute="top" secondItem="kp7-Sp-AgB" secondAttribute="bottom" constant="10" id="x7c-bG-9Qy"/>
+                            <constraint firstItem="SSd-gb-cUX" firstAttribute="top" secondItem="Z66-4B-YoW" secondAttribute="bottom" constant="10" id="xwY-ds-vEB"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryTextField" destination="V7v-VA-l6V" id="vlp-Ns-ceR"/>
                         <outlet property="contentsTextView" destination="SSd-gb-cUX" id="bqb-J2-woV"/>
                         <outlet property="datePicker" destination="0sQ-yW-Jmj" id="eTg-ad-EOa"/>
                         <outlet property="titleTextField" destination="FvB-Mk-uWo" id="dHf-Eb-TE4"/>

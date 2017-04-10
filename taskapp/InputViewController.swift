@@ -58,7 +58,6 @@ class InputViewController: UIViewController {
     }
     
     // タスクのローカル通知を登録する
-    // タスクのローカル通知を登録する
     func setNotification(task: Task) {
         let content = UNMutableNotificationContent()
         content.title = task.title

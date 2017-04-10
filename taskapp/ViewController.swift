@@ -10,9 +10,10 @@ import UIKit
 import RealmSwift
 import UserNotifications
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var categorySearchBar: UISearchBar!
     
     // Realmインスタンスを取得する
     let realm = try! Realm()
@@ -20,13 +21,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // DB内のタスクが格納されるリスト。
     // 日付近い順\順でソート：降順
     // 以降内容をアップデートするとリスト内は自動的に更新される。
-    let taskArray = try! Realm().objects(Task.self).sorted(byProperty: "date", ascending: false)
+    var taskArray = try! Realm().objects(Task.self).sorted(byProperty: "date", ascending: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        categorySearchBar.delegate = self
+        categorySearchBar.enablesReturnKeyAutomatically = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -120,6 +124,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    // 検索ボタンを押下した時に呼ばれる
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        categorySearchBar.endEditing(true)
+        
+        let searchConditions: String = categorySearchBar.text!
+        if searchConditions != "" {
+            taskArray = try! realm.objects(Task.self).filter("category = '\(searchConditions)'")
+            tableView.reloadData()
+        } else {
+            taskArray = try! Realm().objects(Task.self).sorted(byProperty: "date", ascending: false)
+            tableView.reloadData()
+        }
     }
 }
 

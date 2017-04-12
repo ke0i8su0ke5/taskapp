@@ -132,12 +132,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let searchConditions: String = categorySearchBar.text!
         if searchConditions != "" {
-            taskArray = try! realm.objects(Task.self).filter("category = '\(searchConditions)'")
-            tableView.reloadData()
+            taskArray = realm.objects(Task.self).filter("category = '\(searchConditions)'")
         } else {
             taskArray = try! Realm().objects(Task.self).sorted(byProperty: "date", ascending: false)
-            tableView.reloadData()
         }
+        tableView.reloadData()
     }
 }
 
